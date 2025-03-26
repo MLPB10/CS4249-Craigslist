@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Optional if you have external CSS -->
+</head>
+<body>
+  <h1>Welcome to the Craigslist Test</h1>
+  <p>Choose what you'd like to do:</p>
+  
+  <!-- Example navigation to the next page -->
+  <a href="type-of-posting.html" onclick="recordPageLeave('index.html')">Go to Type of Posting</a>
+
+  <!-- Include shared script -->
+  <script src="script.js"></script>
+  <script>
+    // Record when the user lands on the homepage
+    recordPageLoad('index.html');
+  </script>
+</body>
+</html>

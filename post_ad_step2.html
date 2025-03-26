@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Job Advertisement - Craigslist Mock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">craigslist</div>
+             <nav>
+                <a href="#">Log in</a> <a href="#">Sign up</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Post Job Advertisement</h2>
+
+            <form class="job-ad-form" action="job_detail.html" method="get"> <section class="form-section">
+                    <h3>Contact Info</h3>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                    </section>
+
+                <section class="form-section">
+                    <h3>Posting Details</h3>
+                    <label for="title">Posting Title:</label>
+                    <input type="text" id="title" name="title" required>
+
+                    <label for="location">City or Neighborhood:</label>
+                    <input type="text" id="location" name="location">
+
+                    <label for="postal_code">Postal Code:</label>
+                    <input type="text" id="postal_code" name="postal_code">
+
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" rows="8" required></textarea>
+                </section>
+
+                 <section class="form-section">
+                    <h3>Job Details</h3>
+                     <div class="inline-fields">
+                         <label for="compensation">Compensation:</label>
+                         <input type="text" id="compensation" name="compensation">
+                         <label for="employment_type">Employment Type:</label>
+                        <select id="employment_type" name="employment_type">
+                            <option value="">-</option>
+                            <option value="full-time">Full-time</option>
+                            <option value="part-time">Part-time</option>
+                            <option value="contract">Contract</option>
+                            <option value="internship">Internship</option>
+                        </select>
+                     </div>
+                     </section>
+
+                <button type="submit">Continue</button> </form>
+        </main>
+
+        <footer>
+             <a href="#">Help</a> | <a href="#">Safety</a> | <a href="#">About</a>
+        </footer>
+    </div>
+
+    <script src="logging.js"></script>
+</body>
+</html>

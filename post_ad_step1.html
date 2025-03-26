@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type of Posting - Craigslist Mock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">craigslist</div>
+             <nav>
+                <a href="#">Log in</a> <a href="#">Sign up</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>What type of posting is this?</h2>
+            <form action="post_ad_step2.html" method="get"> <div class="posting-type-options">
+                    <label><input type="radio" name="posting_type" value="job"> job offered</label>
+                    <label><input type="radio" name="posting_type" value="gig"> gig offered</label>
+                    <label><input type="radio" name="posting_type" value="resume"> resume / job wanted</label>
+                    <label><input type="radio" name="posting_type" value="housing"> housing offered</label>
+                    <label><input type="radio" name="posting_type" value="wanted"> housing wanted</label>
+                    <label><input type="radio" name="posting_type" value="sale"> for sale by owner</label>
+                     </div>
+                <br>
+                <button type="submit">Continue</button>
+            </form>
+        </main>
+
+        <footer>
+             <a href="#">Help</a> | <a href="#">Safety</a> | <a href="#">About</a>
+        </footer>
+    </div>
+
+    <script src="logging.js"></script>
+</body>
+</html>

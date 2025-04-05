@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage - Craigslist Matt</title>
+    <title>Homepage - Craigslist</title>
     <link rel="stylesheet" href="style.css">
+    <script src="logging.js"></script> 
 </head>
 <body>
+    <script>
+        function logStartTask() {
+            console.log('startLogging');
+            loggingjs.logEvent(null, 'TaskStart', {
+                eventName: 'myeventName',
+                info: {'key1': 'val1', 'key2': 'val2'}
+            });
+
+            window.location.href = "post_ad_step1.html";
+        }
+    </script>
+
     <div class="container">
         <header>
             <div class="logo">craigslist</div>
@@ -19,7 +33,9 @@
             <aside class="homepage-left">
                 <div>Calendar Placeholder</div>
                 <br>
-                <a href="post_ad_step1.html" class="button-link">Post to Classifieds</a> </aside>
+                <input id="btnStartPostTask" class="button-link" value="Post to Classifieds" type="button" onclick="logStartTask()"/>
+
+            </aside>
 
             <section class="homepage-right">
                 <div class="category-box">Community</div>
@@ -38,6 +54,6 @@
         </footer>
     </div>
 
-    <script src="logging.js"></script> 
+   
 </body>
 </html>

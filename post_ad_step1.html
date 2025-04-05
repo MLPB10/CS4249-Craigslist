@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Type of Posting - Craigslist Mock</title>
+    <title>Type of Posting - Craigslist</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,17 +14,19 @@
                 <a href="#">Log in</a> <a href="#">Sign up</a>
             </nav>
         </header>
-
         <main>
             <h2>What type of posting is this?</h2>
-            <form action="post_ad_step2.html" method="get"> <div class="posting-type-options">
-                    <label><input type="radio" name="posting_type" value="job"> job offered</label>
-                    <label><input type="radio" name="posting_type" value="gig"> gig offered</label>
-                    <label><input type="radio" name="posting_type" value="resume"> resume / job wanted</label>
-                    <label><input type="radio" name="posting_type" value="housing"> housing offered</label>
-                    <label><input type="radio" name="posting_type" value="wanted"> housing wanted</label>
-                    <label><input type="radio" name="posting_type" value="sale"> for sale by owner</label>
-                     </div>
+            <form action="post_ad_step2.html" method="get"> 
+                <div class="posting-type-options">
+                    <label><input type="radio" name="posting_type" value="community"> Community</label>
+                    <label><input type="radio" name="posting_type" value="housing"> Housing</label>
+                    <label><input type="radio" name="posting_type" value="jobs"> Jobs</label>
+                    <label><input type="radio" name="posting_type" value="services"> Services</label>
+                    <label><input type="radio" name="posting_type" value="sale"> For-sale</label>
+                    <label><input type="radio" name="posting_type" value="discussion"> Discussion Forum</label>
+                    <label><input type="radio" name="posting_type" value="gigs"> Gigs</label>
+                    <label><input type="radio" name="posting_type" value="resumes"> Resumes</label>
+                </div>
                 <br>
                 <button type="submit">Continue</button>
             </form>

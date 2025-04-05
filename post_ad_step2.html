@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post Job Advertisement - Craigslist Mock</title>
+    <title>Post Job Advertisement - Craigslist</title>
     <link rel="stylesheet" href="style.css">
+    <script src="logging.js"></script>
 </head>
 <body>
+    <script>
+        function logEndTask() {
+            console.log('endLogging');
+            loggingjs.logEvent(null, 'TaskEnd', {
+                eventName: 'myeventName',
+                info: {'key1': 'val1', 'key2': 'val2'}
+            });
+
+            document.getElementById('job-ad-form').submit();
+        }
+    </script>
+
     <div class="container">
         <header>
             <div class="logo">craigslist</div>
@@ -16,46 +29,41 @@
         </header>
 
         <main>
-            <h2>Post Job Advertisement</h2>
+            <h2>Posting an Job Advertisement</h2>
 
-            <form class="job-ad-form" action="job_detail.html" method="get"> <section class="form-section">
-                    <h3>Contact Info</h3>
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required>
-                    </section>
-
+            <form class="job-ad-form" action="job_detail.html" method="get"> 
                 <section class="form-section">
                     <h3>Posting Details</h3>
-                    <label for="title">Posting Title:</label>
-                    <input type="text" id="title" name="title" required>
+                    <label for="jobTitle">Job Title</label>
+                    <input type="text" id="jobTitle" name="jobTitle" required>
 
-                    <label for="location">City or Neighborhood:</label>
-                    <input type="text" id="location" name="location">
+                    <label for="jobCategory">Job Category</label>
+                    <input type="text" id="jobCategory" name="jobCategory" required>
 
-                    <label for="postal_code">Postal Code:</label>
-                    <input type="text" id="postal_code" name="postal_code">
+                    <label for="zipCode">Zip Code</label>
+                    <input type="text" id="zipCode" name="zipCode" required>
 
-                    <label for="description">Description:</label>
-                    <textarea id="description" name="description" rows="8" required></textarea>
+                    <label for="companyName">Company Name</label>
+                    <textarea id="companyName" name="companyName" rows="8" required></textarea>
+
+                    <label for="employmentType">Emplyoment Type</label>
+                    <input type="text" id="employmentType" name="employmentType" required>
+
+                    <label for="expLevel">Experience Level</label>
+                    <input type="text" id="expLevel" name="expLevel" required>
                 </section>
 
-                 <section class="form-section">
+                <section class="form-section">
                     <h3>Job Details</h3>
-                     <div class="inline-fields">
-                         <label for="compensation">Compensation:</label>
-                         <input type="text" id="compensation" name="compensation">
-                         <label for="employment_type">Employment Type:</label>
-                        <select id="employment_type" name="employment_type">
-                            <option value="">-</option>
-                            <option value="full-time">Full-time</option>
-                            <option value="part-time">Part-time</option>
-                            <option value="contract">Contract</option>
-                            <option value="internship">Internship</option>
-                        </select>
-                     </div>
-                     </section>
 
-                <button type="submit">Continue</button> </form>
+                    <label for="compensation">Compensation</label>
+                    <input type="text" id="compensation" name="compensation" required>
+
+                    <label for="jobDesc">Job Description</label>
+                    <textarea id="jobDesc" name="jobDesc" rows="8" required></textarea>
+                </section>
+
+                <button id="btnEndPostTask" onclick="logEndTask();">Post Job</button> </form>
         </main>
 
         <footer>
@@ -63,6 +71,6 @@
         </footer>
     </div>
 
-    <script src="logging.js"></script>
+    
 </body>
 </html>

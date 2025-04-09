@@ -1,0 +1,175 @@
+/* Global Styles (unchanged) */
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #555;
+}
+
+header nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Homepage Specific */
+.homepage-main {
+    display: flex;
+    gap: 20px;
+}
+
+.homepage-left {
+    flex: 1;
+}
+
+.homepage-right {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.category-box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.category-box:hover {
+    background-color: #e0e0e0;
+}
+
+/* Type of Posting Page Specific */
+.posting-type-options label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Post Job Ad Page Specific */
+.job-ad-form .form-section {
+    border: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.job-ad-form h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.job-ad-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Larger form element styles for text entries, selects, and textareas */
+.job-ad-form input[type="text"],
+.job-ad-form input[type="email"],
+.job-ad-form select,
+.job-ad-form textarea {
+    width: 98%;              /* Nearly full width */
+    padding: 14px;           /* Increased padding for a more comfortable click/tap area */
+    font-size: 1.3em;        /* Bigger font for improved readability */
+    border: 2px solid #ccc;  /* Thicker border for prominence */
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Inline fields adjustment, if used */
+.job-ad-form .inline-fields {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.job-ad-form .inline-fields label {
+    margin-bottom: 0;
+}
+
+.job-ad-form .inline-fields input,
+.job-ad-form .inline-fields select {
+    width: auto;
+    flex: 1;
+}
+
+/* Job Detail Page Specific */
+.job-detail-main {
+    display: flex;
+    gap: 30px;
+}
+
+.job-detail-content {
+    flex: 3;
+}
+
+.job-detail-sidebar {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.job-detail-sidebar p {
+    margin: 5px 0 10px 0;
+}
+
+/* Buttons */
+button, .button-link {
+    background-color: #6f42c1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+button:hover, .button-link:hover {
+    background-color: #5a3d9a;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #777;
+    text-align: center;
+}

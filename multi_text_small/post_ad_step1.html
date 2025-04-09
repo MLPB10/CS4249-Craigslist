@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Type of Posting - Craigslist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">craigslist</div>
+      <nav>
+        <a href="#">Log in</a> <a href="#">Sign up</a>
+      </nav>
+    </header>
+    <main>
+      <h2>What type of posting is this?</h2>
+      <!-- Removed direct form action, handled in JavaScript -->
+      <form id="postingTypeForm" action="post_ad_entry_task.html" method="get">
+        <div class="posting-type-options">
+          <label><input type="radio" name="posting_type" value="community"> Community</label>
+          <label><input type="radio" name="posting_type" value="housing"> Housing</label>
+          <label><input type="radio" name="posting_type" value="jobs"> Jobs</label>
+          <label><input type="radio" name="posting_type" value="services"> Services</label>
+          <label><input type="radio" name="posting_type" value="sale"> For-sale</label>
+          <label><input type="radio" name="posting_type" value="discussion"> Discussion Forum</label>
+          <label><input type="radio" name="posting_type" value="gigs"> Gigs</label>
+          <label><input type="radio" name="posting_type" value="resumes"> Resumes</label>
+        </div>
+        <br>
+        <button type="submit">Continue</button>
+      </form>
+    </main>
+    <footer>
+      <a href="#">Help</a> | <a href="#">Safety</a> | <a href="#">About</a>
+    </footer>
+  </div>
+
+  <script>
+    // Listen for submission and adjust redirection if "jobs" is chosen.
+    document.getElementById("postingTypeForm").addEventListener("submit", function(event) {
+      // Get the value of the selected posting type
+      var selectedPostingType = document.querySelector('input[name="posting_type"]:checked');
+      if (selectedPostingType && selectedPostingType.value === "jobs") {
+        event.preventDefault(); // Cancel the normal submission
+        // Redirect to the new job category selection page
+        window.location.href = "post_ad_job_category.html";
+      }
+      // For non-job postings, submission continues to "post_ad_entry_task.html"
+    });
+  </script>
+
+  <script src="logging.js"></script>
+</body>
+</html>

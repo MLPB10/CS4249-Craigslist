@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Job Advertisement - Craigslist</title>
+    <!-- You can either modify style.css globally or include overrides here -->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="logging.js"></script>
+</head>
+<body>
+    <script>
+        function logEndTask() {
+            console.log('endLogging');
+            loggingjs.logEvent(null, 'TaskEnd', {
+                eventName: 'myeventName',
+                info: {'key1': 'val1', 'key2': 'val2'}
+            });
+            document.getElementById('job-ad-form').submit();
+        }
+    </script>
+
+    <div class="container">
+        <header>
+            <div class="logo">craigslist</div>
+             <nav>
+                <a href="#">Log in</a> <a href="#">Sign up</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Posting a Job Advertisement</h2>
+
+            <form id="job-ad-form" class="job-ad-form" action="job_detail.html" method="get"> 
+                <section class="form-section">
+                    <h3>Posting Details</h3>
+                    <label for="jobTitle">Job Title</label>
+                    <input type="text" id="jobTitle" name="jobTitle" required>
+
+                    <!-- Manual text entry for job category -->
+                    <label for="jobCategory">Job Category</label>
+                    <input type="text" id="jobCategory" name="jobCategory" required>
+
+                    <label for="zipCode">Zip Code</label>
+                    <input type="text" id="zipCode" name="zipCode" required>
+
+                    <label for="companyName">Company Name</label>
+                    <textarea id="companyName" name="companyName" rows="8" required></textarea>
+
+                    <label for="employmentType">Employment Type</label>
+                    <input type="text" id="employmentType" name="employmentType" required>
+
+                    <label for="expLevel">Experience Level</label>
+                    <input type="text" id="expLevel" name="expLevel" required>
+                </section>
+
+                <section class="form-section">
+                    <h3>Job Details</h3>
+
+                    <label for="compensation">Compensation</label>
+                    <input type="text" id="compensation" name="compensation" required>
+
+                    <label for="jobDesc">Job Description</label>
+                    <textarea id="jobDesc" name="jobDesc" rows="8" required></textarea>
+                </section>
+
+                <button id="btnEndPostTask" type="button" onclick="logEndTask();">Post Job</button>
+            </form>
+        </main>
+
+        <footer>
+             <a href="#">Help</a> | <a href="#">Safety</a> | <a href="#">About</a>
+        </footer>
+    </div>
+    
+</body>
+</html>

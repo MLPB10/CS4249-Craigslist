@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Type of Posting - Craigslist</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // When the form is submitted, we check if the user has selected "jobs"
+    // If so, we change the form's action to go to the job category page
+    function handlePostTypeSubmit() {
+      var selected = document.querySelector('input[name="posting_type"]:checked');
+      if (selected && selected.value === "jobs") {
+        // Redirect to the job category selection page
+        document.getElementById("postingTypeForm").action = "post_ad_job_category.html";
+      }
+      // For non-job posting types, the form action remains as in the markup
+      return true; // continue submission
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">craigslist</div>
+      <nav>
+        <a href="#">Log in</a> <a href="#">Sign up</a>
+      </nav>
+    </header>
+    <main>
+      <h2>What type of posting is this?</h2>
+      <form id="postingTypeForm" action="post_ad_entry_task.html" method="get" onsubmit="return handlePostTypeSubmit()">
+        <div class="posting-type-options">
+          <label><input type="radio" name="posting_type" value="community" required> Community</label>
+          <label><input type="radio" name="posting_type" value="housing"> Housing</label>
+          <label><input type="radio" name="posting_type" value="jobs"> Jobs</label>
+          <label><input type="radio" name="posting_type" value="services"> Services</label>
+          <label><input type="radio" name="posting_type" value="sale"> For-sale</label>
+          <label><input type="radio" name="posting_type" value="discussion"> Discussion Forum</label>
+          <label><input type="radio" name="posting_type" value="gigs"> Gigs</label>
+          <label><input type="radio" name="posting_type" value="resumes"> Resumes</label>
+        </div>
+        <br>
+        <button type="submit">Continue</button>
+      </form>
+    </main>
+    <footer>
+      <a href="#">Help</a> | <a href="#">Safety</a> | <a href="#">About</a>
+    </footer>
+  </div>
+  <script src="logging.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Job Advertisement - Craigslist</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="logging.js"></script>
+</head>
+<body>
+  <script>
+    function logEndTask() {
+      console.log('endLogging');
+      loggingjs.logEvent(null, 'TaskEnd', {
+        eventName: 'myeventName',
+        info: {'key1': 'val1', 'key2': 'val2'}
+      });
+      document.getElementById('job-ad-form').submit();
+    }
+  </script>
+  <div class="container">
+    <header>
+      <div class="logo">craigslist</div>
+      <nav>
+        <a href="#">Log in</a> <a href="#">Sign up</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Posting a Job Advertisement</h2>
+      <form id="job-ad-form" class="job-ad-form" action="job_detail.html" method="get">
+        <section class="form-section">
+          <h3>Posting Details</h3>
+          <!-- Job Title remains a text input -->
+          <label for="jobTitle">Job Title</label>
+          <input type="text" id="jobTitle" name="jobTitle" required>
+
+          <!-- Job Category as a group of radio buttons split in two columns -->
+          <fieldset>
+            <legend>Job Category</legend>
+            <div class="radio-columns">
+              <label><input type="radio" name="jobCategory" value="accounting" required> accounting/finance</label>
+              <label><input type="radio" name="jobCategory" value="admin"> admin/office</label>
+              <label><input type="radio" name="jobCategory" value="architect"> architect/engineer/cad</label>
+              <label><input type="radio" name="jobCategory" value="art"> art/media/design</label>
+              <label><input type="radio" name="jobCategory" value="business"> business/mgmt</label>
+              <label><input type="radio" name="jobCategory" value="customer service"> customer service</label>
+              <label><input type="radio" name="jobCategory" value="education"> education/teaching</label>
+              <label><input type="radio" name="jobCategory" value="etcetera"> et cetera</label>
+              <label><input type="radio" name="jobCategory" value="food"> food/beverage/hospitality</label>
+              <label><input type="radio" name="jobCategory" value="general labor"> general labor</label>
+              <label><input type="radio" name="jobCategory" value="government"> government</label>
+              <label><input type="radio" name="jobCategory" value="healthcare"> healthcare</label>
+              <label><input type="radio" name="jobCategory" value="human resource"> human resource</label>
+              <label><input type="radio" name="jobCategory" value="legal"> legal/paralegal</label>
+              <label><input type="radio" name="jobCategory" value="manufacturing"> manufacturing</label>
+              <label><input type="radio" name="jobCategory" value="marketing"> marketing/advertising/pr</label>
+              <label><input type="radio" name="jobCategory" value="nonprofit"> nonprofit</label>
+              <label><input type="radio" name="jobCategory" value="real estate"> real estate</label>
+              <label><input type="radio" name="jobCategory" value="retail"> retail/wholesale</label>
+              <label><input type="radio" name="jobCategory" value="sales"> sales</label>
+              <label><input type="radio" name="jobCategory" value="salon"> salon/spa/fitness</label>
+              <label><input type="radio" name="jobCategory" value="science"> science/biotech</label>
+              <label><input type="radio" name="jobCategory" value="security"> security</label>
+              <label><input type="radio" name="jobCategory" value="skilled trades"> skilled trades/artisan</label>
+              <label><input type="radio" name="jobCategory" value="software"> software/qa/dba/etc</label>
+              <label><input type="radio" name="jobCategory" value="systems"> systems/networking</label>
+              <label><input type="radio" name="jobCategory" value="technical support"> technical support</label>
+              <label><input type="radio" name="jobCategory" value="transportation"> transportation</label>
+              <label><input type="radio" name="jobCategory" value="tv"> tv/film/video/radio</label>
+              <label><input type="radio" name="jobCategory" value="web"> web/html/info design</label>
+              <label><input type="radio" name="jobCategory" value="writing"> writing/editing</label>
+            </div>
+          </fieldset>
+
+          <!-- Zip Code as radio buttons in two columns -->
+          <fieldset>
+            <legend>Zip Code</legend>
+            <div class="radio-columns">
+              <label><input type="radio" name="zipCode" value="10001" required> 10001</label>
+              <label><input type="radio" name="zipCode" value="90210"> 90210</label>
+              <label><input type="radio" name="zipCode" value="30303"> 30303</label>
+              <label><input type="radio" name="zipCode" value="60601"> 60601</label>
+              <label><input type="radio" name="zipCode" value="94105"> 94105</label>
+            </div>
+          </fieldset>
+
+          <!-- Company Name as a textarea -->
+          <label for="companyName">Company Name</label>
+          <textarea id="companyName" name="companyName" rows="8" required></textarea>
+
+          <!-- Employment Type as radio buttons in two columns -->
+          <fieldset>
+            <legend>Employment Type</legend>
+            <div class="radio-columns">
+              <label><input type="radio" name="employmentType" value="full-time" required> Full-Time</label>
+              <label><input type="radio" name="employmentType" value="part-time"> Part-Time</label>
+              <label><input type="radio" name="employmentType" value="contract"> Contract</label>
+              <label><input type="radio" name="employmentType" value="temporary"> Temporary</label>
+              <label><input type="radio" name="employmentType" value="internship"> Internship</label>
+            </div>
+          </fieldset>
+
+          <!-- Experience Level as radio buttons in two columns -->
+          <fieldset>
+            <legend>Experience Level</legend>
+            <div class="radio-columns">
+              <label><input type="radio" name="expLevel" value="entry" required> Entry-Level</label>
+              <label><input type="radio" name="expLevel" value="mid"> Mid-Level</label>
+              <label><input type="radio" name="expLevel" value="senior"> Senior-Level</label>
+            </div>
+          </fieldset>
+        </section>
+        <section class="form-section">
+          <h3>Job Details</h3>
+          <!-- Compensation as radio buttons in two columns -->
+          <fieldset>
+            <legend>Compensation</legend>
+            <div class="radio-columns">
+              <label><input type="radio" name="compensation" value="below_30000" required> Below $30,000</label>
+              <label><input type="radio" name="compensation" value="30000_50000"> $30,000 - $50,000</label>
+              <label><input type="radio" name="compensation" value="50000_70000"> $50,000 - $70,000</label>
+              <label><input type="radio" name="compensation" value="70000_100000"> $70,000 - $100,000</label>
+              <label><input type="radio" name="compensation" value="above_100000"> Above $100,000</label>
+            </div>
+          </fieldset>
+          <!-- Job Description remains a textarea -->
+          <label for="jobDesc">Job Description</label>
+          <textarea id="jobDesc" name="jobDesc" rows="8" required></textarea>
+        </section>
+        <button id="btnEndPostTask" type="button" onclick="logEndTask();">Post Job</button>
+      </form>
+    </main>
+    <footer>
+      <a href="#">Help</a> | <a href="#">Safety</a> | <a href="#">About</a>
+    </footer>
+  </div>
+  <script src="logging.js"></script>
+</body>
+</html>

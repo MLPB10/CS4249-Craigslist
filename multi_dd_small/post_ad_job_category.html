@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Job Category - Craigslist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">craigslist</div>
+            <nav>
+                <a href="#">Log in</a> <a href="#">Sign up</a>
+            </nav>
+        </header>
+        <main>
+            <h2>please choose a category: (<a href="#">see prohibited</a>)</h2>
+            <form action="post_ad_entry_task.html" method="get">
+                <label for="job_category">Job Category</label>
+                <select id="job_category" name="job_category" required>
+                    <option value="">Select a Job Category</option>
+                    <option value="accounting">accounting/finance</option>
+                    <option value="admin">admin/office</option>
+                    <option value="architect">architect/engineer/cad</option>
+                    <option value="art">art/media/design</option>
+                    <option value="business">business/mgmt</option>
+                    <option value="customer service">customer service</option>
+                    <option value="education">education/teaching</option>
+                    <option value="etcetera">et cetera</option>
+                    <option value="food">food/beverage/hospitality</option>
+                    <option value="general labor">general labor</option>
+                    <option value="government">government</option>
+                    <option value="healthcare">healthcare</option>
+                    <option value="human resource">human resource</option>
+                    <option value="legal">legal/paralegal</option>
+                    <option value="manufacturing">manufacturing</option>
+                    <option value="marketing">marketing/advertising/pr</option>
+                    <option value="nonprofit">nonprofit</option>
+                    <option value="real estate">real estate</option>
+                    <option value="retail">retail/wholesale</option>
+                    <option value="sales">sales</option>
+                    <option value="salon">salon/spa/fitness</option>
+                    <option value="science">science/biotech</option>
+                    <option value="security">security</option>
+                    <option value="skilled trades">skilled trades/artisan</option>
+                    <option value="software">software/qa/dba/etc</option>
+                    <option value="systems">systems/networking</option>
+                    <option value="technical support">technical support</option>
+                    <option value="transportation">transportation</option>
+                    <option value="tv">tv/film/video/radio</option>
+                    <option value="web">web/html/info design</option>
+                    <option value="writing">writing/editing</option>
+                </select>
+                <br>
+                <button type="submit">Continue</button>
+            </form>
+        </main>
+
+        <footer>
+            <a href="#">Help</a> | <a href="#">Safety</a> | <a href="#">About</a>
+        </footer>
+    </div>
+
+    <script src="logging.js"></script>
+</body>
+</html>

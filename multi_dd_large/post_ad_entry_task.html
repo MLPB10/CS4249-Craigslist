@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Job Advertisement - Craigslist</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="logging.js"></script>
+</head>
+<body>
+  <script>
+    function logEndTask() {
+      console.log('endLogging');
+      loggingjs.logEvent(null, 'TaskEnd', {
+        eventName: 'myeventName',
+        info: {'key1': 'val1', 'key2': 'val2'}
+      });
+      document.getElementById('job-ad-form').submit();
+    }
+  </script>
+  <div class="container">
+    <header>
+      <div class="logo">craigslist</div>
+      <nav>
+        <a href="#">Log in</a> <a href="#">Sign up</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Posting a Job Advertisement</h2>
+      <form id="job-ad-form" class="job-ad-form" action="job_detail.html" method="get">
+        <section class="form-section">
+          <h3>Posting Details</h3>
+          <label for="jobTitle">Job Title</label>
+          <input type="text" id="jobTitle" name="jobTitle" required>
+
+          <!-- Zip Code as a dropdown menu -->
+          <label for="zipCode">Zip Code</label>
+          <select id="zipCode" name="zipCode" required>
+            <option value="">Select Zip Code</option>
+            <option value="10001">10001</option>
+            <option value="90210">90210</option>
+            <option value="30303">30303</option>
+            <option value="60601">60601</option>
+            <option value="94105">94105</option>
+          </select>
+
+          <label for="companyName">Company Name</label>
+          <textarea id="companyName" name="companyName" rows="8" required></textarea>
+
+          <!-- Employment Type as a dropdown -->
+          <label for="employmentType">Employment Type</label>
+          <select id="employmentType" name="employmentType" required>
+            <option value="">Select Employment Type</option>
+            <option value="full-time">Full-Time</option>
+            <option value="part-time">Part-Time</option>
+            <option value="contract">Contract</option>
+            <option value="temporary">Temporary</option>
+            <option value="internship">Internship</option>
+          </select>
+
+          <!-- Experience Level as a dropdown -->
+          <label for="expLevel">Experience Level</label>
+          <select id="expLevel" name="expLevel" required>
+            <option value="">Select Experience Level</option>
+            <option value="entry">Entry-Level</option>
+            <option value="mid">Mid-Level</option>
+            <option value="senior">Senior-Level</option>
+          </select>
+        </section>
+        <section class="form-section">
+          <h3>Job Details</h3>
+          <!-- Compensation as a dropdown menu -->
+          <label for="compensation">Compensation</label>
+          <select id="compensation" name="compensation" required>
+            <option value="">Select Compensation Range</option>
+            <option value="below_30000">Below $30,000</option>
+            <option value="30000_50000">$30,000 - $50,000</option>
+            <option value="50000_70000">$50,000 - $70,000</option>
+            <option value="70000_100000">$70,000 - $100,000</option>
+            <option value="above_100000">Above $100,000</option>
+          </select>
+
+          <label for="jobDesc">Job Description</label>
+          <textarea id="jobDesc" name="jobDesc" rows="8" required></textarea>
+        </section>
+        <button id="btnEndPostTask" type="button" onclick="logEndTask();">Post Job</button>
+      </form>
+    </main>
+    <footer>
+      <a href="#">Help</a> | <a href="#">Safety</a> | <a href="#">About</a>
+    </footer>
+  </div>
+  <script src="logging.js"></script>
+</body>
+</html>

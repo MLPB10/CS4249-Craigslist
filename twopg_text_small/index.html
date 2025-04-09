@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - Craigslist</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="logging.js"></script> 
+</head>
+<body>
+    <script>
+        function logStartTask() {
+            console.log('startLogging');
+            loggingjs.logEvent(null, 'TaskStart', {
+                eventName: 'myeventName',
+                info: {'key1': 'val1', 'key2': 'val2'}
+            });
+
+            window.location.href = "post_ad_step1.html";
+        }
+    </script>
+
+    <div class="container">
+        <header>
+            <div class="logo">craigslist</div>
+            <nav>
+                <a href="#">Log in</a> <a href="#">Sign up</a>
+            </nav>
+        </header>
+
+        <main class="homepage-main">
+            <aside class="homepage-left">
+                <div>Calendar Placeholder</div>
+                <br>
+                <input id="btnStartPostTask" class="button-link" value="Post to Classifieds" type="button" onclick="logStartTask()"/>
+
+            </aside>
+
+            <section class="homepage-right">
+                <div class="category-box">Community</div>
+                <div class="category-box">Housing</div>
+                <div class="category-box">Jobs</div>
+                <div class="category-box">Services</div>
+                <div class="category-box">For Sale</div>
+                <div class="category-box">Discussion Forums</div>
+                <div class="category-box">Gigs</div>
+                <div class="category-box">Resumes</div>
+            </section>
+        </main>
+
+        <footer>
+            <a href="#">Help</a> | <a href="#">Safety</a> | <a href="#">About</a>
+        </footer>
+    </div>
+
+   
+</body>
+</html>

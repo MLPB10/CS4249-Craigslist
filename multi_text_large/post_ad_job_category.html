@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Job Category - Craigslist</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic 3-column layout for categories */
+        .category-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+            gap: 10px; /* Add space between items */
+            padding: 15px 0; /* Add some padding */
+        }
+
+        .category-options label {
+            display: block; /* Ensure labels take up their own line within the grid cell */
+            margin-bottom: 5px;
+        }
+
+        /* Adjust label alignment if needed */
+         .category-options label input {
+             margin-right: 5px;
+             vertical-align: middle;
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">craigslist</div>
+             <nav>
+                <a href="#">Log in</a> <a href="#">Sign up</a>
+            </nav>
+        </header>
+        <main>
+            <h2>please choose a category: (<a href="#">see prohibited</a>)</h2>
+            <form action="post_ad_entry_task.html" method="get">
+                <div class="category-options">
+                    <div>
+                        <label><input type="radio" name="job_category" value="accounting" required> accounting/finance</label>
+                        <label><input type="radio" name="job_category" value="admin"> admin/office</label>
+                        <label><input type="radio" name="job_category" value="architect"> architect/engineer/cad</label>
+                        <label><input type="radio" name="job_category" value="art"> art/media/design</label>
+                        <label><input type="radio" name="job_category" value="business"> business/mgmt</label>
+                        <label><input type="radio" name="job_category" value="customer service"> customer service</label>
+                        <label><input type="radio" name="job_category" value="education"> education/teaching</label>
+                        <label><input type="radio" name="job_category" value="etcetera"> et cetera</label>
+                        <label><input type="radio" name="job_category" value="food"> food/beverage/hospitality</label>
+                        <label><input type="radio" name="job_category" value="general labor"> general labor</label>
+                    </div>
+                    <div>
+                         <label><input type="radio" name="job_category" value="government"> government</label>
+                         <label><input type="radio" name="job_category" value="healthcare"> healthcare</label>
+                         <label><input type="radio" name="job_category" value="human resource"> human resource</label>
+                         <label><input type="radio" name="job_category" value="legal"> legal/paralegal</label>
+                         <label><input type="radio" name="job_category" value="manufacturing"> manufacturing</label>
+                         <label><input type="radio" name="job_category" value="marketing"> marketing/advertising/pr</label>
+                         <label><input type="radio" name="job_category" value="nonprofit"> nonprofit</label>
+                         <label><input type="radio" name="job_category" value="real estate"> real estate</label>
+                         <label><input type="radio" name="job_category" value="retail"> retail/wholesale</label>
+                         <label><input type="radio" name="job_category" value="sales"> sales</label>
+                         <label><input type="radio" name="job_category" value="salon"> salon/spa/fitness</label>
+                    </div>
+                    <div>
+                         <label><input type="radio" name="job_category" value="science"> science/biotech</label>
+                         <label><input type="radio" name="job_category" value="security"> security</label>
+                         <label><input type="radio" name="job_category" value="skilled trades"> skilled trades/artisan</label>
+                         <label><input type="radio" name="job_category" value="software"> software/qa/dba/etc</label>
+                         <label><input type="radio" name="job_category" value="systems"> systems/networking</label>
+                         <label><input type="radio" name="job_category" value="technical support"> technical support</label>
+                         <label><input type="radio" name="job_category" value="transportation"> transportation</label>
+                         <label><input type="radio" name="job_category" value="tv"> tv/film/video/radio</label>
+                         <label><input type="radio" name="job_category" value="web"> web/html/info design</label>
+                         <label><input type="radio" name="job_category" value="writing"> writing/editing</label>
+                    </div>
+                </div>
+                <br>
+                <button type="submit">Continue</button>
+            </form>
+        </main>
+
+        <footer>
+             <a href="#">Help</a> | <a href="#">Safety</a> | <a href="#">About</a>
+        </footer>
+    </div>
+
+    <script src="logging.js"></script>
+</body>
+</html>

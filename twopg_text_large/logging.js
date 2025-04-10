@@ -42,6 +42,20 @@ var loggingjs = (function() { // Immediately-Invoked Function Expression (IIFE);
 // A persistent unique id for the user.
 var uid = getUniqueId();
 
+let secretcode = null; // Define with let, initialize to null
+try {
+    const urlParams = new URLSearchParams(window.location.search);
+    secretcode = urlParams.get('secretcode'); 
+    // Check if secretcode was found, otherwise use default value 0
+    if (secretcode === null || secretcode === undefined || secretcode === '') { // More robust check
+        console.log("Secret code not found in URL parameters or is empty. Using default value 0."); // Changed to console.log
+        secretcode = 0; 
+    }
+} catch (e) {
+    console.error("Error processing URL parameters:", e);
+    secretcode = 0; // Default to 0 in case of error too
+}
+
 // Hooks up all the event listeners.
 function hookEventsToLog() {
   // Set up low-level event capturing.  This intercepts all
@@ -138,7 +152,7 @@ function logEvent(event, customName, customInfo) {
     console.log(uid, time, eventName, target, info, state, LOG_VERSION);
   }
   if (ENABLE_NETWORK_LOGGING) {
-    sendNetworkLog(uid, time, eventName, target, info, state, LOG_VERSION);
+    sendNetworkLog(uid, time, eventName, target, info, state, LOG_VERSION, secretcode);
   }
 }
 
@@ -189,10 +203,11 @@ function sendNetworkLog(
     target,
     info,
     state,
-    log_version) {
+    log_version, 
+    secretcodeparam) {
   var formid = "e/1FAIpQLSceUijEU91_ZD6yxkuj8bmiyqpjyZayxm-DoGWtUWYvJ2DicA";
   var data = {
-    "entry.2145644790": secretcode,
+    "entry.2145644790": secretcodeparam,
     "entry.1077837961": uid,
     "entry.1417590357": time,
     "entry.449309509": eventname,
@@ -201,6 +216,8 @@ function sendNetworkLog(
     "entry.504437254": state,
     "entry.104367827": log_version
   };
+
+  
   var params = [];
   for (key in data) {
     params.push(key + "=" + encodeURIComponent(data[key]));

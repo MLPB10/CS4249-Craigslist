@@ -192,7 +192,7 @@ function sendNetworkLog(
     log_version) {
   var formid = "e/1FAIpQLSceUijEU91_ZD6yxkuj8bmiyqpjyZayxm-DoGWtUWYvJ2DicA";
   var data = {
-    "entry.2145644790": ResponseId,
+    "entry.2145644790": secretcode,
     "entry.1077837961": uid,
     "entry.1417590357": time,
     "entry.449309509": eventname,

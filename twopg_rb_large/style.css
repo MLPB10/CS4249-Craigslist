@@ -4,8 +4,6 @@ body {
     margin: 20px;
     background-color: #f9f9f9;
     color: #333;
-    /* Increased base font size for overall larger text */
-    font-size: 16px;
 }
 
 .container {
@@ -173,6 +171,13 @@ header nav a {
 
 .job-detail-sidebar p {
     margin: 5px 0 10px 0;
+}
+
+.large-button {font-size: 19px !important;}
+
+input[type="radio"] {
+    height:18px; 
+    width:18px;
 }
 
 /* Buttons and links */

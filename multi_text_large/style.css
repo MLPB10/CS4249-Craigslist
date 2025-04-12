@@ -146,6 +146,8 @@ header nav a {
     margin: 5px 0 10px 0;
 }
 
+.large-button {font-size: 19px !important;}
+
 /* Buttons */
 button, .button-link {
     background-color: #6f42c1;

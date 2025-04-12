@@ -146,6 +146,16 @@ header nav a {
     margin: 5px 0 10px 0;
 }
 
+.job-posting-type select {
+    padding: 14px;           /* Increased padding for a more comfortable click/tap area */
+    font-size: 1.3em;         /* Bigger font for improved readability */
+    border: 2px solid #ccc;  /* Thicker border for prominence */
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.large-button {font-size: 19px !important;}
+
 /* Buttons */
 button, .button-link {
     background-color: #6f42c1;

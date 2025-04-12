@@ -71,7 +71,7 @@ header nav a {
 /* Type of Posting Page Specific */
 .posting-type-options label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px; /* Reduced from 10px */
     font-size: 1em;
 }
 

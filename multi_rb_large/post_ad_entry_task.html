@@ -48,6 +48,7 @@
             </div>
           </fieldset>
 
+          <br>
           <!-- Company Name as a textarea -->
           <label for="companyName">Company Name</label>
           <textarea id="companyName" name="companyName" rows="8" required></textarea>
@@ -63,7 +64,7 @@
               <label><input type="radio" name="employmentType" value="internship"> Internship</label>
             </div>
           </fieldset>
-
+          <br>
           <!-- Experience Level as radio buttons in two columns -->
           <fieldset>
             <legend>Experience Level</legend>
@@ -87,11 +88,12 @@
               <label><input type="radio" name="compensation" value="above_100000"> Above $100,000</label>
             </div>
           </fieldset>
+          <br>
           <!-- Job Description remains a textarea -->
           <label for="jobDesc">Job Description</label>
           <textarea id="jobDesc" name="jobDesc" rows="8" required></textarea>
         </section>
-        <button id="btnEndPostTask" type="button" onclick="logEndTask();">Post Job</button>
+        <button id="btnEndPostTask" class="large-button" type="button" onclick="logEndTask();">Post Job</button>
       </form>
     </main>
     <footer>

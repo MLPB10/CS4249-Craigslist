@@ -94,6 +94,16 @@ header nav a {
     font-weight: bold;
 }
 
+.job-posting-type select,
+.job-category-form select {
+    padding: 14px;           /* Increased padding for a more comfortable click/tap area */
+    font-size: 1.3em;         /* Bigger font for improved readability */
+    border: 2px solid #ccc;  /* Thicker border for prominence */
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+
 /* Larger form element styles for text entries, selects, and textareas */
 .job-ad-form input[type="text"],
 .job-ad-form input[type="email"],
@@ -163,6 +173,8 @@ button, .button-link {
 button:hover, .button-link:hover {
     background-color: #5a3d9a;
 }
+
+.large-button {font-size: 19px;}
 
 /* Footer */
 footer {

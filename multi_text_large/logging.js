@@ -17,6 +17,9 @@
 var ENABLE_NETWORK_LOGGING = true; // Controls network logging.
 var ENABLE_CONSOLE_LOGGING = true; // Controls console logging.
 var LOG_VERSION = '0.1';           // Labels every entry with version: "0.1".
+var NAV_FLOW = 'Multiple steps';
+var INPUT_TYPE = 'Manual Entry';
+var ELEMENT_SIZE = 'Large';
 
 // These event types are intercepted for logging before jQuery handlers.
 var EVENT_TYPES_TO_LOG = {
@@ -152,7 +155,7 @@ function logEvent(event, customName, customInfo) {
     console.log(uid, time, eventName, target, info, state, LOG_VERSION);
   }
   if (ENABLE_NETWORK_LOGGING) {
-    sendNetworkLog(uid, time, eventName, target, info, state, LOG_VERSION, secretcode);
+    sendNetworkLog(uid, time, eventName, target, info, state, LOG_VERSION, secretcode, NAV_FLOW, INPUT_TYPE, ELEMENT_SIZE);
   }
 }
 
@@ -204,7 +207,10 @@ function sendNetworkLog(
     info,
     state,
     log_version, 
-    secretcodeparam) {
+    secretcodeparam,
+    navigation_flow,
+    input_type,
+    element_size) {
   var formid = "e/1FAIpQLSceUijEU91_ZD6yxkuj8bmiyqpjyZayxm-DoGWtUWYvJ2DicA";
   var data = {
     "entry.2145644790": secretcodeparam,
@@ -214,10 +220,11 @@ function sendNetworkLog(
     "entry.476660299": target,
     "entry.1310564566": info,
     "entry.504437254": state,
-    "entry.104367827": log_version
+    "entry.104367827": log_version,
+    "entry.112553958": navigation_flow,
+    "entry.807094603": input_type,
+    "entry.1366163530": element_size
   };
-
-  
   var params = [];
   for (key in data) {
     params.push(key + "=" + encodeURIComponent(data[key]));
